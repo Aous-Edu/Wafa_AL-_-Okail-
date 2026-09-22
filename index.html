@@ -1,264 +1,530 @@
-<!DOCTYPE html>
+"<!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>نشاط اليوم الوطني 96- الروضة الثامنة</title>
+
     
+
     <!-- تحميل الخطوط -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Amiri:wght@700&display=swap" rel="stylesheet">
+
     
+
     <!-- تحميل Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
 
+
+
     <style>
+
         :root {
+
             --bg-dark: #021a14;
+
             --bg-grid: #062b21;
+
             --border-green: #0a4738;
+
             --gold: #d4af37;
+
             --green: #2ecc71;
+
             --sword-green: #48bb78;
+
             --blue: #3182ce;
+
             --pink: #d53f8c;
+
             --purple: #805ad5;
+
             --lemon-green: #a3e635; /* لون ليموني فاتح */
+
         }
+
+
 
         body {
+
             font-family: 'Cairo', sans-serif;
+
             background-color: var(--bg-dark);
+
             background-image: 
+
                 linear-gradient(to right, rgba(6, 43, 33, 0.4) 1px, transparent 1px),
+
                 linear-gradient(to bottom, rgba(6, 43, 33, 0.4) 1px, transparent 1px);
+
             background-size: 40px 40px;
+
             color: #ffffff;
+
             min-height: 100vh;
+
         }
+
+
 
         .banner-border {
+
             border: 4px solid #005c45;
+
             background: rgba(2, 26, 20, 0.95);
+
             box-shadow: 0 0 25px rgba(0, 92, 69, 0.3);
+
         }
+
+
 
         .checkered-pattern {
+
             background-color: #021a14;
+
             background-image: radial-gradient(#084232 20%, transparent 20%);
+
             background-size: 10px 10px;
+
         }
+
+
 
         .value-card {
+
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
             background: rgba(4, 32, 25, 0.85);
+
             border: 2px solid #0a4738;
+
             backdrop-filter: blur(5px);
+
             cursor: pointer;
+
             position: relative;
+
             overflow: hidden;
+
         }
+
+
 
         .value-card:hover {
+
             transform: translateY(-8px) scale(1.02);
+
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+
         }
+
+
 
         .card-vision:hover { border-color: #d4af37; box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25); }
+
         .card-courage:hover { border-color: #48bb78; box-shadow: 0 10px 25px rgba(72, 187, 120, 0.25); }
+
         .card-ambition:hover { border-color: #d53f8c; box-shadow: 0 10px 25px rgba(213, 63, 140, 0.25); }
+
         .card-authenticity:hover { border-color: var(--lemon-green); box-shadow: 0 10px 25px rgba(163, 230, 53, 0.25); }
+
         .card-hospitality:hover { border-color: #3182ce; box-shadow: 0 10px 25px rgba(49, 130, 206, 0.25); }
+
         .card-generosity:hover { border-color: #805ad5; box-shadow: 0 10px 25px rgba(128, 90, 213, 0.25); }
 
+
+
         .kufic-title {
+
             font-family: 'Amiri', serif;
+
             letter-spacing: 1px;
+
         }
 
+
+
         .tile-frame {
+
             position: relative;
+
             aspect-ratio: 1 / 1;
+
             width: 100%;
+
         }
+
     </style>
+
 </head>
+
+
 
 <body class="flex flex-col min-h-screen justify-between p-4 md:p-8 relative">
 
+
+
     <header class="max-w-6xl mx-auto w-full mb-10 text-center">
+
         <!-- الشريط العلوي الجديد -->
+
         <div class="flex flex-col md:flex-row justify-between items-center mb-6 bg-[#03251c]/80 border border-emerald-800/50 p-4 rounded-xl shadow-lg gap-4">
+
             <!-- اليمين: معلومات الوزارة -->
+
             <div class="text-center md:text-right flex-1 min-w-0 w-full md:w-auto">
+
                 <h3 class="text-emerald-300 font-bold text-sm md:text-base">وزارة التعليم</h3>
+
                 <h4 class="text-emerald-100 font-black text-lg md:text-xl">الروضة الثامنة</h4>
+
             </div>
+
             
+
             <!-- الوسط: إعداد وتنفيذ -->
+
             <div class="flex-1 text-center min-w-0 w-full md:w-auto">
+
                 <div class="inline-block bg-emerald-900/40 border border-emerald-600/50 px-6 py-2 rounded-full shadow-inner">
+
                     <span class="text-xs text-emerald-400 font-bold">إعداد وتنفيذ :</span>
+
                     <span class="text-sm md:text-base font-black text-amber-300 mr-1">د. وفاء سعد العكيل</span>
+
                 </div>
+
             </div>
+
+
 
             <!-- اليسار: مكان الشعار -->
+
             <div class="text-center md:text-left flex-1 flex justify-center md:justify-end min-w-0 w-full md:w-auto">
+
                 <div class="w-16 h-16 md:w-20 md:h-20 bg-black/30 border border-dashed border-emerald-600/50 rounded-lg flex items-center justify-center overflow-hidden" title="مكان مخصص للشعار">
+
                     <img src="moh_logo.png" id="img-logoLeft" alt="شعار" class="w-full h-full object-contain p-1" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
+
                     <div class="text-[10px] text-emerald-700 font-bold text-center px-1" style="display: none;">مكان<br>الشعار</div>
+
                 </div>
+
             </div>
+
         </div>
+
+
 
         <!-- صورة الهيدر -->
+
         <div class="mb-6 max-w-4xl mx-auto rounded-xl overflow-hidden border-2 border-emerald-600/60 shadow-xl bg-[#03251c] relative">
+
             <img src="hdr.png" alt="صورة الهيدر الرئيسية" class="w-full h-auto max-h-60 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x400/03251c/d4af37?text=%D8%B9%D8%B2%D9%86%D8%A7+%D8%A8%D8%B7%D8%A8%D8%B9%D9%86%D8%A7';">
+
         </div>
 
+
+
         <!-- البانر الرئيسي -->
+
         <div class="banner-border p-4 md:p-6 rounded-lg relative overflow-hidden mb-6">
+
             <div class="absolute inset-0 checkered-pattern opacity-30"></div>
+
             <div class="relative z-10 flex flex-col items-center justify-center border-2 border-emerald-600/50 p-4 rounded text-center">
+
            
+
                 
+
                 <p class="text-emerald-300 text-sm md:text-base font-semibold mt-1">
+
                     اضغط على أي قيمة للانتقال للرابط المخصص لها
+
                 </p>
+
             </div>
+
         </div>
+
     </header>
+
+
 
     <main class="max-w-6xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
 
+
+
         <!-- 1. عزنا برؤيتنا -->
+
         <div class="value-card card-vision rounded-xl p-5 flex flex-col items-center text-center group" onclick="navigateTo('vision')">
+
             <div class="w-full tile-frame mb-4 rounded-lg overflow-hidden border border-amber-600/30 bg-[#03251c] flex items-center justify-center">
+
                 <img src="1.png" alt="عزنا برؤيتنا" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x400/03251c/d4af37?text=%D8%B9%D8%B2%D9%86%D8%A7+%D8%A8%D8%B1%D8%A4%D9%8A%D8%AA%D9%86%D8%A7';">
+
             </div>
+
             <div class="mt-2">
+
                 <span class="text-xs uppercase tracking-widest text-amber-400 font-bold block mb-1">القيمة: الرؤية</span>
+
                 <h2 class="text-3xl font-black text-amber-300 group-hover:text-amber-200 transition-colors">عِزّنَا بِرُؤْيَتِنَا</h2>
+
             </div>
+
         </div>
+
+
 
         <!-- 2. عزنا بهمتنا (مقدمة بعد الرؤية) -->
+
         <div class="value-card card-ambition rounded-xl p-5 flex flex-col items-center text-center group" onclick="navigateTo('ambition')">
+
             <div class="w-full tile-frame mb-4 rounded-lg overflow-hidden border border-pink-600/30 bg-[#03251c] flex items-center justify-center">
+
                 <img src="3.png" alt="عزنا بهمتنا" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x400/03251c/d53f8c?text=%D8%B9%D8%B2%D9%86%D8%A7+%D8%A8%D9%87%D9%85%D8%AA%D9%86%D8%A7';">
+
             </div>
+
             <div class="mt-2">
+
                 <span class="text-xs uppercase tracking-widest text-pink-400 font-bold block mb-1">القيمة: الهمة والحيويّة</span>
+
                 <h2 class="text-3xl font-black text-pink-300 group-hover:text-pink-200 transition-colors">عِزّنَا بِهِمَّتِنَا</h2>
+
             </div>
+
         </div>
+
+
 
         <!-- 3. عزنا بشجاعتنا -->
+
         <div class="value-card card-courage rounded-xl p-5 flex flex-col items-center text-center group" onclick="navigateTo('courage')">
+
             <div class="w-full tile-frame mb-4 rounded-lg overflow-hidden border border-emerald-600/30 bg-[#03251c] flex items-center justify-center">
+
                 <img src="2.png" alt="عزنا بشجاعتنا" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x400/03251c/48bb78?text=%D8%B9%D8%B2%D9%86%D8%A7+%D8%A8%D8%B4%D8%AC%D8%A7%D8%B9%D8%AA%D9%86%D8%A7';">
+
             </div>
+
             <div class="mt-2">
+
                 <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold block mb-1">القيمة: الشجاعة</span>
+
                 <h2 class="text-3xl font-black text-emerald-300 group-hover:text-emerald-200 transition-colors">عِزّنَا بِشَجَاعَتِنَا</h2>
+
             </div>
+
         </div>
+
+
 
         <!-- 4. عزنا بأصالتنا (بلون أخضر ليموني فاتح) -->
+
         <div class="value-card card-authenticity rounded-xl p-5 flex flex-col items-center text-center group" onclick="navigateTo('authenticity')">
+
             <div class="w-full tile-frame mb-4 rounded-lg overflow-hidden border border-lime-400/30 bg-[#03251c] flex items-center justify-center">
+
                 <img src="4.png" alt="عزنا بأصالتنا" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x400/03251c/a3e635?text=%D8%B9%D8%B2%D9%86%D8%A7+%D8%A8%D8%A3%D8%B5%D8%A7%D9%84%D8%AA%D9%86%D8%A7';">
+
             </div>
+
             <div class="mt-2">
+
                 <span class="text-xs uppercase tracking-widest text-lime-400 font-bold block mb-1">القيمة: الأصالة</span>
+
                 <h2 class="text-3xl font-black text-lime-400 group-hover:text-lime-300 transition-colors">عِزّنَا بِأَصَالَتِنَا</h2>
+
             </div>
+
         </div>
+
+
 
         <!-- 5. عزنا بكرمنا -->
+
         <div class="value-card card-hospitality rounded-xl p-5 flex flex-col items-center text-center group" onclick="navigateTo('hospitality')">
+
             <div class="w-full tile-frame mb-4 rounded-lg overflow-hidden border border-blue-500/30 bg-[#03251c] flex items-center justify-center">
+
                 <img src="5.png" alt="عزنا بكرمنا" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x400/03251c/3182ce?text=%D8%B9%D8%B2%D9%86%D8%A7+%D8%A8%D9%83%D8%B1%D9%85%D9%86%D8%A7';">
+
             </div>
+
             <div class="mt-2">
+
                 <span class="text-xs uppercase tracking-widest text-blue-400 font-bold block mb-1">القيمة: الكرم والضيافة</span>
+
                 <h2 class="text-3xl font-black text-blue-300 group-hover:text-blue-200 transition-colors">عِزّنَا بِكَرَمِنَا</h2>
+
             </div>
+
         </div>
 
+
+
         <!-- 6. عزنا بجودنا -->
+
         <div class="value-card card-generosity rounded-xl p-5 flex flex-col items-center text-center group" onclick="navigateTo('generosity')">
+
             <div class="w-full tile-frame mb-4 rounded-lg overflow-hidden border border-purple-500/30 bg-[#03251c] flex items-center justify-center">
+
                 <img src="6.png" alt="عزنا بجودنا" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x400/03251c/805ad5?text=%D8%B9%D8%B2%D9%86%D8%A7+%D8%A8%D8%AC%D9%88%D8%AF%D9%86%D8%A7';">
+
             </div>
+
             <div class="mt-2">
+
                 <span class="text-xs uppercase tracking-widest text-purple-400 font-bold block mb-1">القيمة: الجود والعطاء</span>
+
                 <h2 class="text-3xl font-black text-purple-300 group-hover:text-purple-200 transition-colors">عِزّنَا بِجُودِنَا</h2>
+
             </div>
+
         </div>
+
+
 
     </main>
 
+
+
     <footer class="max-w-6xl mx-auto w-full flex justify-center items-center py-6 border-t border-emerald-900/60 mt-auto">
+
         <div class="text-emerald-500 text-xs font-bold">
+
             <p>© إعداد وتصميم : د.وفاء سعد العكيل</p>
+
         </div>
+
     </footer>
 
+
+
     <script>
+
         // إعدادات الصوت
+
         let navSynth;
+
         let isAudioInitialized = false;
 
+
+
         async function initAudio() {
+
             if (!isAudioInitialized) {
+
                 await Tone.start();
+
                 // صوت التنقل عبر البطاقات الرئيسية
+
                 navSynth = new Tone.PolySynth(Tone.Synth, {
+
                     oscillator: { type: "sine" },
+
                     envelope: { attack: 0.05, decay: 0.2, sustain: 0.2, release: 1 }
+
                 }).toDestination();
+
                 navSynth.volume.value = -10;
+
                 
+
                 isAudioInitialized = true;
+
             }
+
         }
+
+
 
         // تشغيل صوت عند الانتقال
+
         function playNavClick() {
+
             if (isAudioInitialized && navSynth) {
+
                 navSynth.triggerAttackRelease(["E5", "G5", "C6"], "8n");
+
             }
+
         }
+
+
 
         // تهيئة الصوت عند التفاعل
+
         document.body.addEventListener('click', initAudio, { once: true });
 
+
+
         // روابط البطاقات - قم بتعديلها مباشرة من الكود هنا
+
         const links = {
+
             vision: 'https://drive.google.com/file/d/1vQGG8BOYFengCiI0-TiW8HOkk8herOPo/preview ',
+
             courage: 'https://drive.google.com/file/d/1k6k3jNHxCWbtQzf9mu5RQe2BHMdhvOSy/preview',
+
             ambition: 'https://drive.google.com/file/d/1aO2cknstF_bRKdbalyNrkgYKJCVuC9eh/preview ',
+
             authenticity: 'https://drive.google.com/file/d/1CvwU8JrKI5OkY-5n9f_FBGnxKfS2phk4/preview ',
+
             hospitality: 'https://drive.google.com/file/d/128eUKI70xkkgNFa82Twwn5ZifdMPrkuw/preview ',
+
             generosity: 'https://drive.google.com/file/d/1AdryAzgg4gy6X0JYeEmpglE5Sc0XyHfp/preview '
+
         };
 
+
+
         // الانتقال للرابط
+
         function navigateTo(key) {
+
             playNavClick();
+
             const url = links[key];
+
             if (url && url !== '#') {
+
                 // الانتظار قليلاً ليتم سماع الصوت قبل الانتقال للرابط
+
                 setTimeout(() => {
+
                     window.open(url, '_blank');
+
                 }, 150);
+
             }
+
         }
+
     </script>
+
 </body>
+
 </html>
+
+" 
+
